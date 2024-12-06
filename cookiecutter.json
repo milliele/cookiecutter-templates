@@ -1,0 +1,9 @@
+{
+  "templates": {
+    "pypackage": {
+      "path": "./pypackage",
+      "title": "Python Package Template",
+      "description": "A cookiecutter template for a simple Python project"
+    }
+  }
+}

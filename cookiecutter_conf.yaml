@@ -1,0 +1,8 @@
+default_context:
+  full_name: "Millie"
+  email: "milliele@qq.com"
+  github_org_name: "milliele"
+  __template_url: "https://github.com/milliele/cookiecutter-templates"
+abbreviations:
+  pp: https://github.com/{0}/cookiecutter-templates.git
+  gh: https://github.com/{0}.git
