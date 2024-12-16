@@ -1,0 +1,25 @@
+{
+  "project_name": "Python Boilerplate",
+  "directory_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "full_name": "My Name",
+  "email": "my_email@some.com",
+  "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
+  "support_cli": false,
+  "cmd_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "initial_version": "0.0.99",
+  "open_source_license": [
+    "MIT license",
+    "BSD license",
+    "ISC license",
+    "Apache Software License 2.0",
+    "GNU General Public License v3",
+    "Not open source"
+  ],
+  "build_wheel": false,
+  "support_pypi_upload": false,
+  "pypi_username": "your_name",
+  "source_url": "{% if cookiecutter.github_org_name is defined %}https://github.com/{{ cookiecutter.github_org_name }}/{{ cookiecutter.package_name }}{% endif %}",
+  "__template_url": "",
+  "use_pytest": true
+}
