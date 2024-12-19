@@ -4,3 +4,4 @@ dist
 .coverage
 htmlcov
 .coveragerc
+**/output_data

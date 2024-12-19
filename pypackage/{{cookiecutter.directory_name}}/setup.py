@@ -20,12 +20,11 @@ with open('LICENSE', 'r') as f:
 
 DEV_DEPENDENCIES = [
     'coverage',
-{%-if cookiecutter.support_pypi_upload == true %}
+{%- if cookiecutter.support_pypi_upload == true %}
     'twine',
-{% endif -%}
-{%-if cookiecutter.use_pytest == true %}
+{%- endif %}{% if cookiecutter.use_pytest == true %}
     'pytest',
-{% endif -%}
+{%- endif %}
 ]
 
 

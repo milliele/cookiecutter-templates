@@ -1,7 +1,7 @@
 SHELL = /bin/sh
 
 .PHONY: help deps coveragerc test integrated-test cov html-cov update-html-cov
-.PHONY: dist-clean runtime-clean clean install build {% if cookiecutter.support_pypi_upload == true %}publish{% endif %}
+.PHONY: dist-clean runtime-clean clean install build{% if cookiecutter.support_pypi_upload == true %} publish{% endif %}
 
 all: help
 
@@ -20,7 +20,7 @@ help:
 	@echo "clean				 	Run ``dist-clean`` and ``runtime-clean``"
 	@echo "install				 	Install package from source code"
 	@echo "build				 	Prepare python package for distribution"
-{% if cookiecutter.support_pypi_upload == true %}
+{%- if cookiecutter.support_pypi_upload == true %}
 	@echo "publish				 	Publish package to PyPI"
 {% endif %}
 # ****************************************************
@@ -65,7 +65,7 @@ build: dist-clean runtime-clean
 	python3 setup.py check
 	python3 setup.py sdist{% if cookiecutter.build_wheel == true %} bdist_wheel{% endif %}
 
-{%- if cookiecutter.support_pypi_upload == true -%}
+{% if cookiecutter.support_pypi_upload == true -%}
 publish: build
 	# will not override existing version
 	python3 -m twine upload -r testpypi -u {{ cookiecutter.pypi_username }} dist/*
